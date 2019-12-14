@@ -41,7 +41,7 @@ module.exports.getProduct = function(req, res, next) {
     // console.log(req.body);
     // res.json(req.body);
     let id = req.params.id;
-    db.Product.find({_id : id}) 
+    db.Product.findOne({_id : id}) 
     .then(result => {
         res.json(result);
     })
